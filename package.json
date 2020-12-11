@@ -4,8 +4,8 @@
   "description": "Template API",
   "main": "src/index.js",
   "scripts": {
-    "start": "sudo node src/index.js",
-    "test": "sudo nodemon src/index.js"
+    "start": "sudo sh -c \"export NODE_ENV=prod && node src/index.js\"",
+    "test": "export NODE_ENV=test && nodemon src/index.js"
   },
   "repository": {
     "type": "git",
@@ -24,9 +24,14 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "compression": "^1.7.4",
-    "express": "^4.17.1"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
+    "eslint": "^7.14.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
     "nodemon": "^2.0.6"
   }
 }
